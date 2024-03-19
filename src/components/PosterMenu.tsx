@@ -34,8 +34,6 @@ const PostersMenu: FC<PostersMenuProps> = ({ links, ids }) => {
 
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
-    console.log(count);
-    console.log(current);
 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
@@ -52,8 +50,8 @@ const PostersMenu: FC<PostersMenuProps> = ({ links, ids }) => {
           }}
           plugins={[plugin.current]}
           className="relative h-fit w-full items-center justify-center md:w-1/3"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          onMouseOver={plugin.current.stop}
+          onMouseLeave={plugin.current.play}
           setApi={setApi}
         >
           <CarouselContent>

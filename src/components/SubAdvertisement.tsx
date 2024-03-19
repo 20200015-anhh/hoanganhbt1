@@ -4,8 +4,8 @@ import WalletsGroup from "./WalletsGroup";
 const SubAdvertisement = () => {
   const wallets = digitalWallets;
   return (
-    <div className="flex w-full h-20 justify-center bg-transparent">
-      <div className="grid grid-cols-2 h-full md:w-1/6 px-2 py-2 w-full gap-2">
+    <div className="flex w-full h-[12vh] justify-center bg-transparent md:h-20">
+      <div className="grid grid-cols-2 h-full md:w-1/6 py-2 w-full gap-2">
         <div className="m-0.5 flex h-full w-full items-center justify-center rounded-lg bg-advertisement-subbg px-4 text-center font-bold text-white">
           {"LƯỚT VÀ NHẬN \n ƯU ĐÃI NGAY !"}
         </div>

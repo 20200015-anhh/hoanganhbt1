@@ -24,7 +24,7 @@ const AdsMenu: FC<AdsMenuProps> = (links) => {
           plugins={[plugin.current]}
           className="w-full items-start md:w-1/3"
           onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          onMouseLeave={plugin.current.play}
         >
           <CarouselContent>
             {links.links.map((link, index) => (
