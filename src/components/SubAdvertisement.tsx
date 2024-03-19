@@ -22,7 +22,7 @@ const SubAdvertisement = () => {
             Khi thanh toán bằng Ví điện tử
           </span>
           <WalletsGroup imgLinks={wallets} />
-        </div>
+        </div>     
       </div>
     </div>
   );
