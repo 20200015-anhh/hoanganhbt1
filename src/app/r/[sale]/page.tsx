@@ -1,12 +1,15 @@
-"use client";
+"use client"
+import { FC, useEffect, useState } from 'react'
+import { Input } from '~/components/ui/Input';
+import { saleIds, saleLinks } from '~/temporarydb/sales';
 
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Input } from "~/components/ui/Input";
-import { saleLinks, saleIds } from "~/temporarydb/sales";
+interface PageProps {
+  params:{
+    sale:string;
+  }
+}
 
-export default function SalePage() {
-  const params = useParams();
+const page: FC<PageProps> = ({params} : PageProps) => {
   const [link, setLink] = useState<string>("");
   useEffect(() => {
     const links = saleLinks;
@@ -32,3 +35,5 @@ export default function SalePage() {
     </>
   );
 }
+
+export default page
