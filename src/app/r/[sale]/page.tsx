@@ -17,8 +17,8 @@ export default function SalePage() {
   return (
     <>
       <div className="flex h-full w-full items-center justify-center gap-x-4 gap-y-2 px-4 py-2">
-        <div className="h-128 flex aspect-square w-96 items-center justify-center rounded-3xl ">
-          <div className="absolute top-96 text-advertisement-text grid w-96 grid-cols-5 gap-2 font-bold columns-xs px-2">
+        <div className="h-[70vh] flex aspect-square w-[50vh] items-center justify-center rounded-3xl ">
+          <div className="absolute top-[60vh] text-advertisement-text grid w-[50vh] grid-cols-5 gap-2 font-bold columns-xs px-2">
             <span className="col-span-2 text-left">MÃ ƯU ĐÃI</span>
             <Input value="abcxyz" className="border-advertisement-text w-6/7 col-span-3" />
             <span className="col-span-2 text-left">HẠN SỬ DỤNG</span>

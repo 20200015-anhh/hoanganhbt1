@@ -19,7 +19,6 @@ interface PostersMenuProps {
 }
 
 const PostersMenu: FC<PostersMenuProps> = ({ links, ids }) => {
-
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -30,29 +29,29 @@ const PostersMenu: FC<PostersMenuProps> = ({ links, ids }) => {
   );
   React.useEffect(() => {
     if (!api) {
-      return 
+      return;
     }
- 
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
-    console.log(count)
-    console.log(current)
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+    console.log(count);
+    console.log(current);
 
     api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <div className="w-full justify-center gap-2 bg-transparent px-2 py-2">
-      <div className="w-full gap-2 rounded-full px-2 py-2">
+      <div className="flex w-full justify-center gap-2 rounded-full px-2 py-2">
         <Carousel
           opts={{
             align: "center",
             loop: true,
           }}
           plugins={[plugin.current]}
-          className="-webkit-mask: linear-gradient(90deg,#0000,#000 10% 80%,#0000) relative h-fit w-full items-center justify-center"
+          className="relative h-fit w-full items-center justify-center md:w-1/3"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
           setApi={setApi}
@@ -66,12 +65,14 @@ const PostersMenu: FC<PostersMenuProps> = ({ links, ids }) => {
           </CarouselContent>
         </Carousel>
       </div>
-      <Button
-        className=" w-full animate-wiggle rounded-3xl bg-advertisement-button px-2 py-4 text-xl font-normal text-white"
-        onClick={() => router.push("/r/" + ids[current-1])}
-      >
-        Nhận mã ưu đãi ngay
-      </Button>
+      <div className="flex w-full justify-center gap-2 rounded-full px-2 py-2">
+        <Button
+          className=" w-full animate-wiggle rounded-3xl bg-advertisement-button px-2 py-4 text-xl font-normal text-white md:w-1/3"
+          onClick={() => router.push("/r/" + ids[current - 1])}
+        >
+          Nhận mã ưu đãi ngay
+        </Button>
+      </div>
     </div>
   );
 };
