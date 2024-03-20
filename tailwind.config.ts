@@ -31,8 +31,8 @@ const config = {
           to: { height: "0" },
         },
         "wiggle" : {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(.85)' },
+          '0%, 60%': { transform: 'scale(1)' },
+          '30%': { transform: 'scale(.85)' },
         },
       },
       animation: {

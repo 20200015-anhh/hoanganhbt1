@@ -22,7 +22,7 @@ const AdsMenu: FC<AdsMenuProps> = (links) => {
             loop: true,
           }}
           plugins={[plugin.current]}
-          className="w-full items-start md:w-1/3"
+          className="w-full items-start md:w-1/3 [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)]"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.play}
         >
